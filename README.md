@@ -1,112 +1,129 @@
-# 我的导航站
+# 我的个性博客
 
-一个现代化、响应式的个人导航站点，帮助您快速访问常用网站和工具。
+一个现代化的静态个人博客，使用纯 HTML、CSS 和 JavaScript 构建。
 
-## ✨ 特性
+## 🌟 特性
 
-- 🎨 **现代化设计** - 采用渐变配色和卡片式布局
-- 🌙 **深色模式** - 支持明暗主题切换
-- 📱 **响应式设计** - 完美适配桌面和移动设备
-- 🔍 **实时搜索** - 快速查找网站和过滤内容
-- ➕ **自定义网站** - 添加您的个人收藏网站
-- ⌨️ **键盘快捷键** - 提升使用效率
-- ♿ **无障碍访问** - 支持键盘导航和屏幕阅读器
-- 💾 **数据持久化** - 本地保存所有个人设置
-
-## 🚀 快速开始
-
-1. 克隆或下载项目文件
-2. 在浏览器中打开 `index.html`
-3. 开始使用您的个人导航站！
+- **响应式设计**: 完美适配桌面、平板和移动设备
+- **现代化界面**: 使用 CSS Grid 和 Flexbox 布局
+- **平滑动画**: 丰富的 CSS 动画和过渡效果
+- **PWA 支持**: 支持离线访问和添加到主屏幕
+- **性能优化**: 使用 Service Worker 缓存和懒加载
+- **SEO 友好**: 语义化 HTML 和 meta 标签优化
 
 ## 📁 项目结构
 
 ```
+.
 ├── index.html          # 主页面
-├── styles.css          # 样式表
-├── script.js           # JavaScript 功能
-└── README.md           # 项目说明
+├── styles.css          # 样式文件
+├── script.js           # 交互脚本
+├── manifest.json       # PWA 配置
+├── sw.js              # Service Worker
+└── README.md          # 项目说明
 ```
 
-## 🛠️ 功能说明
+## 🚀 快速开始
 
-### 内置网站分类
+1. 克隆仓库
+```bash
+git clone https://github.com/q877220/gffdfs.git
+cd gffdfs
+```
 
-- **搜索引擎** - Google、百度、必应、DuckDuckGo
-- **常用网站** - GitHub、Stack Overflow、YouTube、哔哩哔哩、知乎、Notion
-- **开发工具** - VS Code、MDN、CodePen、JSFiddle、Figma、Vercel
-- **实用工具** - Google 翻译、Canva、Unsplash、Font Awesome
+2. 使用本地服务器运行
+```bash
+# 使用 Python
+python -m http.server 8000
 
-### 自定义功能
+# 使用 Node.js
+npx serve .
 
-- 添加个人收藏网站
-- 自定义网站图标（emoji）
-- 删除不需要的网站
-- 搜索过滤功能
+# 使用 Live Server (VS Code 扩展)
+# 右键点击 index.html 选择 "Open with Live Server"
+```
 
-### 键盘快捷键
+3. 在浏览器中访问 `http://localhost:8000`
 
-- `Ctrl/Cmd + K` - 聚焦搜索框
-- `Ctrl/Cmd + Shift + D` - 切换主题
-- `Ctrl/Cmd + Shift + A` - 添加网站
-- `Escape` - 关闭模态框
+## 🎨 自定义
 
-## 🎨 自定义样式
-
-项目使用 CSS 变量定义主题色彩，您可以轻松修改：
+### 修改主题颜色
+在 `styles.css` 中的 `:root` 选择器中修改 CSS 变量：
 
 ```css
 :root {
-    --primary-color: #4f46e5;      /* 主色调 */
-    --secondary-color: #06b6d4;    /* 次要色调 */
-    --background-color: #f8fafc;   /* 背景色 */
-    --surface-color: #ffffff;      /* 卡片背景色 */
-    /* ... 更多变量 */
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    /* 更多颜色变量... */
 }
 ```
 
-## 📱 移动端优化
+### 添加新内容
+- 编辑 `index.html` 添加新的博客文章
+- 在 `styles.css` 中添加自定义样式
+- 在 `script.js` 中添加交互功能
 
-- 响应式网格布局
-- 触摸友好的按钮尺寸
-- 移动端优化的搜索体验
-- 适配各种屏幕尺寸
+### 更新个人信息
+1. 修改 `index.html` 中的个人介绍部分
+2. 更新联系信息
+3. 替换技能标签
+4. 更新博客文章内容
+
+## 📱 PWA 功能
+
+该博客支持 Progressive Web App 功能：
+
+- **离线访问**: 使用 Service Worker 缓存关键资源
+- **安装应用**: 可以添加到主屏幕作为独立应用
+- **快速加载**: 智能缓存策略提高加载速度
 
 ## 🔧 技术栈
 
-- **HTML5** - 语义化标记
-- **CSS3** - 现代化样式和动画
-- **Vanilla JavaScript** - 原生JavaScript实现
-- **Local Storage** - 本地数据存储
+- **HTML5**: 语义化标记
+- **CSS3**: 现代化样式和动画
+- **JavaScript ES6+**: 交互功能和 PWA 支持
+- **Service Worker**: 离线缓存
+- **Web App Manifest**: PWA 配置
 
-## 🌟 浏览器支持
+## 📈 性能优化
 
-- Chrome/Edge 88+
-- Firefox 85+
-- Safari 14+
-- 移动端浏览器
+- CSS 和 JavaScript 压缩
+- 图片懒加载
+- Service Worker 缓存
+- 防抖动滚动事件处理
+- Critical CSS 内联
+
+## 🌐 部署
+
+### GitHub Pages
+1. 推送代码到 GitHub 仓库
+2. 在仓库设置中启用 GitHub Pages
+3. 选择主分支作为源
+
+### Netlify
+1. 连接 GitHub 仓库
+2. 设置构建命令（无需构建步骤）
+3. 设置发布目录为根目录
+
+### Vercel
+1. 导入 GitHub 仓库
+2. 自动部署
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证，详情请参阅 [LICENSE](LICENSE) 文件。
+MIT License - 查看 [LICENSE](LICENSE) 文件了解详情
 
 ## 🤝 贡献
 
-欢迎提交 Issue 和 Pull Request 来改进这个项目！
+欢迎提交 Issues 和 Pull Requests！
 
-## 📝 更新日志
+## 📞 联系
 
-### v1.0.0 (2025-01-XX)
-- 初始版本发布
-- 基础导航功能
-- 主题切换功能
-- 自定义网站添加
-- 响应式设计
-
-## 🙏 致谢
-
-感谢所有为开源社区做出贡献的开发者们！
+- 邮箱: example@email.com
+- GitHub: [@username](https://github.com/username)
+- Twitter: [@username](https://twitter.com/username)
 
 ---
 
-**享受您的个人导航站体验！** 🎉
+⭐ 如果这个项目对你有帮助，请给它一个 star！
