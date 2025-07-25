@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人导航站 - 快速访问您的常用网站</title>
+    <meta name="description" content="一个简洁美观的个人导航站，收录常用网站和工具">
+    <meta name="keywords" content="导航站,书签,网站导航,工具导航">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="logo-icon">🚀</span>
+                    我的导航站
+                </h1>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索网站..." />
+                    <button type="button" id="searchBtn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主要内容 -->
+        <main class="main-content">
+            <!-- 搜索引擎快速访问 -->
+            <section class="search-engines">
+                <h2 class="section-title">搜索引擎</h2>
+                <div class="cards-grid">
+                    <a href="https://www.google.com" target="_blank" class="card search-card">
+                        <div class="card-icon">🌐</div>
+                        <div class="card-info">
+                            <h3>Google</h3>
+                            <p>全球搜索引擎</p>
+                        </div>
+                    </a>
+                    <a href="https://www.baidu.com" target="_blank" class="card search-card">
+                        <div class="card-icon">🔵</div>
+                        <div class="card-info">
+                            <h3>百度</h3>
+                            <p>中文搜索引擎</p>
+                        </div>
+                    </a>
+                    <a href="https://www.bing.com" target="_blank" class="card search-card">
+                        <div class="card-icon">🔷</div>
+                        <div class="card-info">
+                            <h3>必应</h3>
+                            <p>微软搜索引擎</p>
+                        </div>
+                    </a>
+                    <a href="https://duckduckgo.com" target="_blank" class="card search-card">
+                        <div class="card-icon">🦆</div>
+                        <div class="card-info">
+                            <h3>DuckDuckGo</h3>
+                            <p>隐私搜索引擎</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 常用网站 -->
+            <section class="common-sites">
+                <h2 class="section-title">常用网站</h2>
+                <div class="cards-grid">
+                    <a href="https://github.com" target="_blank" class="card">
+                        <div class="card-icon">⚫</div>
+                        <div class="card-info">
+                            <h3>GitHub</h3>
+                            <p>代码托管平台</p>
+                        </div>
+                    </a>
+                    <a href="https://stackoverflow.com" target="_blank" class="card">
+                        <div class="card-icon">📚</div>
+                        <div class="card-info">
+                            <h3>Stack Overflow</h3>
+                            <p>程序员问答社区</p>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="card">
+                        <div class="card-icon">🎥</div>
+                        <div class="card-info">
+                            <h3>YouTube</h3>
+                            <p>视频分享平台</p>
+                        </div>
+                    </a>
+                    <a href="https://www.bilibili.com" target="_blank" class="card">
+                        <div class="card-icon">📺</div>
+                        <div class="card-info">
+                            <h3>哔哩哔哩</h3>
+                            <p>弹幕视频网站</p>
+                        </div>
+                    </a>
+                    <a href="https://www.zhihu.com" target="_blank" class="card">
+                        <div class="card-icon">🌀</div>
+                        <div class="card-info">
+                            <h3>知乎</h3>
+                            <p>知识问答社区</p>
+                        </div>
+                    </a>
+                    <a href="https://www.notion.so" target="_blank" class="card">
+                        <div class="card-icon">📝</div>
+                        <div class="card-info">
+                            <h3>Notion</h3>
+                            <p>笔记协作工具</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 开发工具 -->
+            <section class="dev-tools">
+                <h2 class="section-title">开发工具</h2>
+                <div class="cards-grid">
+                    <a href="https://code.visualstudio.com" target="_blank" class="card">
+                        <div class="card-icon">💙</div>
+                        <div class="card-info">
+                            <h3>VS Code</h3>
+                            <p>代码编辑器</p>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org" target="_blank" class="card">
+                        <div class="card-icon">🦊</div>
+                        <div class="card-info">
+                            <h3>MDN</h3>
+                            <p>Web开发文档</p>
+                        </div>
+                    </a>
+                    <a href="https://codepen.io" target="_blank" class="card">
+                        <div class="card-icon">✏️</div>
+                        <div class="card-info">
+                            <h3>CodePen</h3>
+                            <p>前端代码演示</p>
+                        </div>
+                    </a>
+                    <a href="https://jsfiddle.net" target="_blank" class="card">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-info">
+                            <h3>JSFiddle</h3>
+                            <p>在线代码编辑器</p>
+                        </div>
+                    </a>
+                    <a href="https://www.figma.com" target="_blank" class="card">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-info">
+                            <h3>Figma</h3>
+                            <p>UI设计工具</p>
+                        </div>
+                    </a>
+                    <a href="https://vercel.com" target="_blank" class="card">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-info">
+                            <h3>Vercel</h3>
+                            <p>前端部署平台</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 实用工具 -->
+            <section class="utilities">
+                <h2 class="section-title">实用工具</h2>
+                <div class="cards-grid">
+                    <a href="https://translate.google.com" target="_blank" class="card">
+                        <div class="card-icon">🌍</div>
+                        <div class="card-info">
+                            <h3>Google 翻译</h3>
+                            <p>在线翻译工具</p>
+                        </div>
+                    </a>
+                    <a href="https://www.canva.com" target="_blank" class="card">
+                        <div class="card-icon">🎪</div>
+                        <div class="card-info">
+                            <h3>Canva</h3>
+                            <p>在线设计工具</p>
+                        </div>
+                    </a>
+                    <a href="https://unsplash.com" target="_blank" class="card">
+                        <div class="card-icon">📸</div>
+                        <div class="card-info">
+                            <h3>Unsplash</h3>
+                            <p>免费高质量图片</p>
+                        </div>
+                    </a>
+                    <a href="https://fontawesome.com" target="_blank" class="card">
+                        <div class="card-icon">🔤</div>
+                        <div class="card-info">
+                            <h3>Font Awesome</h3>
+                            <p>图标字体库</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 我的导航站. 欢迎添加您常用的网站!</p>
+                <div class="footer-links">
+                    <button type="button" onclick="toggleTheme()" class="footer-btn">🌙 切换主题</button>
+                    <button type="button" onclick="showAddSiteModal()" class="footer-btn">➕ 添加网站</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 添加网站模态框 -->
+    <div id="addSiteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>添加新网站</h3>
+                <button class="close-btn" onclick="closeAddSiteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addSiteForm">
+                    <div class="form-group">
+                        <label for="siteName">网站名称:</label>
+                        <input type="text" id="siteName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="siteUrl">网站地址:</label>
+                        <input type="url" id="siteUrl" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="siteDescription">网站描述:</label>
+                        <input type="text" id="siteDescription">
+                    </div>
+                    <div class="form-group">
+                        <label for="siteIcon">图标 (emoji):</label>
+                        <input type="text" id="siteIcon" placeholder="🌐" maxlength="2">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit">添加</button>
+                        <button type="button" onclick="closeAddSiteModal()">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
