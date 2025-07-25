@@ -19,6 +19,7 @@
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于</a></li>
                 <li><a href="#blog">博客</a></li>
+                <li><a href="#ai-generator">AI写作</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
             <div class="hamburger">
@@ -119,6 +120,59 @@
                             </div>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-generator" class="ai-generator">
+            <div class="container">
+                <h2>AI智能写作</h2>
+                <div class="ai-controls">
+                    <div class="ai-status">
+                        <div class="status-info">
+                            <span id="generation-status">就绪</span>
+                            <span id="article-count">已生成: 0 篇</span>
+                        </div>
+                        <div class="auto-toggle">
+                            <label class="switch">
+                                <input type="checkbox" id="auto-generation">
+                                <span class="slider"></span>
+                            </label>
+                            <span>自动生成 (5分钟/10篇)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="generation-controls">
+                        <div class="keyword-input">
+                            <input type="text" id="custom-keywords" placeholder="自定义关键词 (可选，用逗号分隔)">
+                            <button id="get-hot-keywords" class="secondary-btn">获取热点</button>
+                        </div>
+                        
+                        <div class="batch-controls">
+                            <label for="article-count-input">生成数量:</label>
+                            <input type="number" id="article-count-input" value="10" min="1" max="50">
+                            <button id="generate-articles" class="primary-btn">立即生成</button>
+                        </div>
+                    </div>
+                    
+                    <div class="keywords-display">
+                        <h4>当前热点关键词:</h4>
+                        <div id="keywords-list" class="keywords-tags"></div>
+                    </div>
+                </div>
+                
+                <div class="generation-progress">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div id="progress-text" class="progress-text">等待开始...</div>
+                </div>
+                
+                <div class="generated-articles">
+                    <h3>最新生成的文章</h3>
+                    <div id="latest-articles" class="latest-articles-grid">
+                        <!-- 动态生成的文章卡片 -->
+                    </div>
                 </div>
             </div>
         </section>

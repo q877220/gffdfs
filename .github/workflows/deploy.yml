@@ -1,10 +1,13 @@
-name: Deploy to GitHub Pages
+name: AI Blog Auto Deploy
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    # 每小时运行一次，检查是否需要生成新文章
+    - cron: '0 * * * *'
 
 jobs:
   deploy:
@@ -22,6 +25,29 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Generate articles if API key is available
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        AUTO_PUSH_ENABLED: true
+        ARTICLES_PER_BATCH: 5
+      run: |
+        if [ -n "$OPENAI_API_KEY" ]; then
+          echo "🤖 OpenAI API key found, generating articles..."
+          npm run generate || echo "⚠️ Article generation failed, continuing with deployment"
+        else
+          echo "ℹ️ No OpenAI API key, skipping article generation"
+        fi
       
     - name: Setup Pages
       uses: actions/configure-pages@v4

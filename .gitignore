@@ -15,6 +15,10 @@ build/
 .env.test.local
 .env.production.local
 
+# AI生成的文章（可选，如果想要跟踪则移除这行）
+# data/articles.json
+# articles/
+
 # 编辑器配置
 .vscode/
 .idea/
@@ -36,3 +40,11 @@ Thumbs.db
 *.zip
 *.tar.gz
 *.rar
+
+# 运行时文件
+.cache/
+.parcel-cache/
+
+# 测试覆盖率
+coverage/
+*.lcov
